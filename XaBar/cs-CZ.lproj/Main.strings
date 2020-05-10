@@ -1,0 +1,96 @@
+
+/* Class = "NSMenuItem"; title = "Quit Application"; ObjectID = "1AY-9e-Dwc"; */
+"1AY-9e-Dwc.title" = "Quit Application";
+
+/* Class = "NSMenuItem"; title = "Settings"; ObjectID = "2aL-P2-e0d"; */
+"2aL-P2-e0d.title" = "Settings";
+
+/* Class = "NSMenuItem"; title = "Reload"; ObjectID = "3xR-PI-f3x"; */
+"3xR-PI-f3x.title" = "Reload";
+
+/* Class = "NSMenuItem"; title = "Hide Application"; ObjectID = "4gH-Gc-Gfb"; */
+"4gH-Gc-Gfb.title" = "Hide Application";
+
+/* Class = "NSMenuItem"; title = "XaBar"; ObjectID = "58d-9O-IEM"; */
+"58d-9O-IEM.title" = "XaBar";
+
+/* Class = "NSTextFieldCell"; title = "aBar"; ObjectID = "624-Gr-Cbg"; */
+"624-Gr-Cbg.title" = "aBar";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "8fq-Jb-XC2"; */
+"8fq-Jb-XC2.title" = "Hide Others";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSTextFieldCell"; title = "Enter product key"; ObjectID = "EzK-Py-DpO"; */
+"EzK-Py-DpO.title" = "Enter product key";
+
+/* Class = "NSTextFieldCell"; title = "aBar"; ObjectID = "J66-Yg-A6f"; */
+"J66-Yg-A6f.title" = "aBar";
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "M2D-dv-cCg"; */
+"M2D-dv-cCg.title" = "About";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "MLf-mj-bZF"; */
+"MLf-mj-bZF.title" = "Box";
+
+/* Class = "NSTextFieldCell"; title = "Created by\nJan Kožnárek & Radoslav Bačik"; ObjectID = "PEl-6U-tIu"; */
+"PEl-6U-tIu.title" = "Created by\nJan Kožnárek & Radoslav Bačik";
+
+/* Class = "NSMenuItem"; title = "About Application"; ObjectID = "QQf-4S-I4D"; */
+"QQf-4S-I4D.title" = "About Application";
+
+/* Class = "NSMenuItem"; title = "Enable incognito mode"; ObjectID = "RhM-vk-BBi"; */
+"RhM-vk-BBi.title" = "Enable incognito mode";
+
+/* Class = "NSWindow"; title = "About"; ObjectID = "T06-aB-Np6"; */
+"T06-aB-Np6.title" = "About";
+
+/* Class = "NSTextFieldCell"; title = "1.2.05"; ObjectID = "WGQ-Re-U5a"; */
+"WGQ-Re-U5a.title" = "1.2.05";
+
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "WJO-Ba-Vf1"; */
+"WJO-Ba-Vf1.title" = "X";
+
+/* Class = "NSViewController"; title = "Settings"; ObjectID = "Znk-LG-HTU"; */
+"Znk-LG-HTU.title" = "Settings";
+
+/* Class = "NSMenu"; title = "XaBar"; ObjectID = "aZ6-2s-Zn2"; */
+"aZ6-2s-Zn2.title" = "XaBar";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "bqJ-1b-cLU"; */
+"bqJ-1b-cLU.title" = "Box";
+
+/* Class = "NSButtonCell"; title = "Reload"; ObjectID = "cYE-Ln-bbk"; */
+"cYE-Ln-bbk.title" = "Reload";
+
+/* Class = "NSTextFieldCell"; title = "X"; ObjectID = "cld-gg-dpe"; */
+"cld-gg-dpe.title" = "X";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "ea6-KI-eFc"; */
+"ea6-KI-eFc.title" = "Close";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "gK6-iZ-hYC"; */
+"gK6-iZ-hYC.title" = "Services";
+
+/* Class = "NSViewController"; title = "Activate product"; ObjectID = "hP5-xU-hgP"; */
+"hP5-xU-hgP.title" = "Activate product";
+
+/* Class = "NSMenuItem"; title = "About"; ObjectID = "hiZ-4i-Aqb"; */
+"hiZ-4i-Aqb.title" = "About";
+
+/* Class = "NSTextFieldCell"; title = "Height"; ObjectID = "jIa-yL-ehm"; */
+"jIa-yL-ehm.title" = "Height";
+
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "k9E-NF-3lq"; */
+"k9E-NF-3lq.title" = "Quit";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "kF4-Hv-Rjm"; */
+"kF4-Hv-Rjm.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "lwA-b9-W7l"; */
+"lwA-b9-W7l.title" = "Show All";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "wJu-p1-keX"; */
+"wJu-p1-keX.title" = "Box";
