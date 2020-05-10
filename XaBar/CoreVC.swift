@@ -37,7 +37,7 @@ extension CoreVC {
     private func setupOverlay() {
         
         self.overlay = Overlay(targetView: self.view)
-        self.view.addSubview(overlay)
+        self.view.addSubview(overlay, positioned: .above, relativeTo: nil)
         overlay.stopLoading()
         
     }

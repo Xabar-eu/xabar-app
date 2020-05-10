@@ -13,11 +13,10 @@ import EasyPeasy
 class Overlay: NSView {
     
     private let size: CGRect!
-    private let HEIGHT_OF_POPOVER_HEADER: CGFloat = 20
     let overlayIndicator = NSProgressIndicator()
 
     init(targetView: NSView) {
-        self.size = CGRect(x: 0, y: -HEIGHT_OF_POPOVER_HEADER, width: targetView.bounds.width, height: targetView.bounds.height)
+        self.size = CGRect(x: 0, y: 0, width: targetView.frame.width, height: targetView.frame.height)
         super.init(frame: size)
     }
     
@@ -40,6 +39,13 @@ class Overlay: NSView {
         overlayIndicator.easy.layout(
             CenterX(),
             CenterY()
+        )
+        
+        self.easy.layout(
+            Top(),
+            Right(0),
+            Bottom(0),
+            Left(0)
         )
         
         let layer = CALayer()

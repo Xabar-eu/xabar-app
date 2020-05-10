@@ -1,13 +1,4 @@
-//
-//  SettingsManager.swift
-//  PWGen
-//
-//  Created by Jan Kožnárek on 28/03/2020.
-//  Copyright © 2020 Adbros. All rights reserved.
-//
-
 import Foundation
-
 
 class SettingsManager {
     

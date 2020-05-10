@@ -85,6 +85,7 @@ extension SettingsVC {
     @IBAction func allowAnimationsChanged(_ sender: NSButton) {
         
         SM.set(.enableAnimations, value: stateToBool(sender.state))
+        delegate.popover.animates = SM.get(.enableAnimations)
         
     }
     
@@ -92,6 +93,7 @@ extension SettingsVC {
     @IBAction func allowAutoCloseChanged(_ sender: NSButton) {
         
         SM.set(.enableAutoClose, value: stateToBool(sender.state))
+        delegate.popover.animates = SM.get(.enableAutoClose)
         
     }
     
@@ -115,7 +117,6 @@ extension SettingsVC {
     private func updateWindowSize() {
         
         let width = SM.get(.width)
-            
         let height = SM.get(.height)
         
         delegate.popover.contentSize = NSSize(width: width, height: height)

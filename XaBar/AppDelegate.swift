@@ -16,42 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         
         firstLaunch()
         
-        let min = NSSize(width: CGFloat(860), height: CGFloat(525))
-        let max = NSSize(width: CGFloat(1000), height: CGFloat(1000))
-        popover = PopoverResize(min: min, max: max)
-        popover.setContentViewController(PopoverVC.getPopoverVC(), initialSize: min)
+        setupPopover()
         
-        statusItem.button!.image?.isTemplate = true
-        statusItem.button!.image = #imageLiteral(resourceName: "normal-icon")
-        statusItem.button!.imageScaling = .scaleProportionallyUpOrDown
-        statusItem.button!.action = #selector(self.clickHandler(sender:))
-        statusItem.button!.sendAction(on: [.leftMouseUp, .rightMouseUp, .mouseEntered, .leftMouseDragged, .mouseMoved, .otherMouseDragged])
-        statusItem.button!.menu = mainMenu
+        setupStatusItem()
         
-        statusItem.button?.window!.registerForDraggedTypes([.fileURL])
-        statusItem.button?.window?.delegate = self
-        
-        popover.animates = true
-        popover.resized {(size: NSSize) in
-            print("Popover resized: \(size)")
-        }
-        
-        popover.contentViewController?.loadView()
-        
-        popover.behavior = (SM.get(.enableAutoClose) == false ? .applicationDefined : .transient)
-        
-    }
-    
-    
-    func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-        return .link
-    }
-    
-    func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-        
-        showPopover()
-        
-        return true
     }
     
     
@@ -73,9 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             //left click
             togglePopover()
             break
-        case .leftMouseDragged, .otherMouseDragged:
-            print("Draged")
-            showPopover()
         default:
             ()
         }
@@ -109,15 +74,53 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     func showPopover() {
         if let button = statusItem.button {
             NSRunningApplication.current.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
-            
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            //popover.contentViewController?.view.window?.makeKey()
         }
     }
     
     
     @objc func closePopover() {
         popover.performClose(Any?.self)
+    }
+    
+}
+
+
+//MARK: SETUP METHODS
+extension AppDelegate {
+    
+    private func setupPopover() {
+        
+        let min = NSSize(width: CGFloat(860), height: CGFloat(525))
+        let max = NSSize(width: CGFloat(1000), height: CGFloat(1000))
+        popover = PopoverResize(min: min, max: max)
+        popover.setContentViewController(PopoverVC.getPopoverVC(), initialSize: min)
+        
+        popover.resized {(size: NSSize) in
+          print("Popover resized: \(size)")
+        }
+              
+        popover.contentViewController?.loadView()
+        
+        popover.animates = SM.get(.enableAnimations)
+        popover.contentSize = NSSize(width: SM.get(.width), height: SM.get(.height))
+        popover.behavior = (SM.get(.enableAutoClose) == false ? .applicationDefined : .transient)
+        
+    }
+    
+    
+    private func setupStatusItem() {
+        
+        statusItem.button!.image?.isTemplate = true
+        statusItem.button!.image = #imageLiteral(resourceName: "normal-icon")
+        statusItem.button!.imageScaling = .scaleProportionallyUpOrDown
+        statusItem.button!.action = #selector(self.clickHandler(sender:))
+        statusItem.button!.sendAction(on: [.leftMouseUp, .rightMouseUp, .mouseEntered, .leftMouseDragged, .mouseMoved, .otherMouseDragged])
+        statusItem.button!.menu = mainMenu
+        
+        statusItem.button?.window!.registerForDraggedTypes([.fileURL])
+        statusItem.button?.window?.delegate = self
+        
     }
     
 }

@@ -460,7 +460,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
         <scene sceneID="8zk-gF-c7S">
             <objects>
                 <viewController title="Settings" storyboardIdentifier="SettingsVC" showSeguePresentationStyle="single" id="Znk-LG-HTU" customClass="SettingsVC" customModule="XaBar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="uFj-8j-dNr">
+                    <view key="view" id="uFj-8j-dNr">
                         <rect key="frame" x="0.0" y="0.0" width="358" height="89"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -587,6 +587,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="WcJ-ba-N67">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-Q1-LOM">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cYE-Ln-bbk">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -604,6 +605,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="Y3Q-7i-cM7">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZ2-lD-SU5">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ea6-KI-eFc">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -668,7 +670,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <color key="borderColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-mp-pDy">
-                                            <rect key="frame" x="3" y="0.0" width="25" height="20"/>
+                                            <rect key="frame" x="8" y="0.0" width="25" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="Sch-3n-62Z"/>
                                             </constraints>
@@ -682,7 +684,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GQt-dt-3fA">
-                                            <rect key="frame" x="28" y="0.0" width="25" height="20"/>
+                                            <rect key="frame" x="33" y="0.0" width="25" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="tCF-LC-sUs"/>
                                             </constraints>
@@ -697,7 +699,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="XuU-mp-pDy" firstAttribute="leading" secondItem="qKH-JW-aha" secondAttribute="leading" constant="3" id="1CR-2E-vzH"/>
+                                        <constraint firstItem="XuU-mp-pDy" firstAttribute="leading" secondItem="qKH-JW-aha" secondAttribute="leading" constant="8" id="1CR-2E-vzH"/>
                                         <constraint firstItem="GQt-dt-3fA" firstAttribute="leading" secondItem="XuU-mp-pDy" secondAttribute="trailing" id="3XU-VM-xiE"/>
                                         <constraint firstItem="GQt-dt-3fA" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="4mF-iw-6L3"/>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="55P-q1-SXV"/>
@@ -772,7 +774,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                     </connections>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="782" y="244.5"/>
+            <point key="canvasLocation" x="779" y="245"/>
         </scene>
     </scenes>
     <resources>

@@ -3,26 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		104F79DF21C683CB00870E31 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104F79DE21C683CB00870E31 /* WebViewController.swift */; };
 		1065098C22AD6F5E00AAE749 /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065098B22AD6F5E00AAE749 /* Overlay.swift */; };
+		1075FAA3246892E50047CC79 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075FAA2246892E50047CC79 /* SettingsManager.swift */; };
 		108C0A0C23B6E55800B7E280 /* CoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C0A0B23B6E55800B7E280 /* CoreVC.swift */; };
 		1093047B226E56AE002A567A /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093047A226E56AE002A567A /* AboutVC.swift */; };
+		10A4A7762466FFC4003CC398 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4A7752466FFC4003CC398 /* SettingsVC.swift */; };
 		10EB1AA3214FE5EB00F5612E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB1AA2214FE5EB00F5612E /* AppDelegate.swift */; };
 		10EB1AA7214FE5EC00F5612E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB1AA6214FE5EC00F5612E /* Assets.xcassets */; };
 		10EB1AAA214FE5EC00F5612E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB1AA8214FE5EC00F5612E /* Main.storyboard */; };
 		10EB1AB3214FEBCB00F5612E /* PopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EB1AB2214FEBCB00F5612E /* PopoverVC.swift */; };
-		3DBAB67633AF50770ED39A8A /* Pods_XaBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D86E83C7F0EDEB5870BA67AF /* Pods_XaBar.framework */; };
+		CA67501347D03EB2F6F4982B /* Pods_XaBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 987BE0FFD760138A6AD12E68 /* Pods_XaBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101850B12464CF6300B68C33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		101850B22464D77700B68C33 /* cs-CZ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "cs-CZ"; path = "cs-CZ.lproj/Main.strings"; sourceTree = "<group>"; };
 		104F79DE21C683CB00870E31 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1065098B22AD6F5E00AAE749 /* Overlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		1075FAA2246892E50047CC79 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		108C0A0B23B6E55800B7E280 /* CoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreVC.swift; sourceTree = "<group>"; };
 		1093047A226E56AE002A567A /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		10A4A7752466FFC4003CC398 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		10EB1A9F214FE5EB00F5612E /* XaBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XaBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EB1AA2214FE5EB00F5612E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10EB1AA6214FE5EC00F5612E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,9 +36,9 @@
 		10EB1AAB214FE5EC00F5612E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10EB1AAC214FE5EC00F5612E /* XaBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XaBar.entitlements; sourceTree = "<group>"; };
 		10EB1AB2214FEBCB00F5612E /* PopoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverVC.swift; sourceTree = "<group>"; };
-		1825A7C485F03094C8A61633 /* Pods-XaBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XaBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XaBar/Pods-XaBar.debug.xcconfig"; sourceTree = "<group>"; };
-		8E38A54C004801F55FDC3FF7 /* Pods-XaBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XaBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-XaBar/Pods-XaBar.release.xcconfig"; sourceTree = "<group>"; };
-		D86E83C7F0EDEB5870BA67AF /* Pods_XaBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XaBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A6510F77C707D64D7335423 /* Pods-XaBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XaBar.release.xcconfig"; path = "Target Support Files/Pods-XaBar/Pods-XaBar.release.xcconfig"; sourceTree = "<group>"; };
+		447040958E2F9782696A1E57 /* Pods-XaBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XaBar.debug.xcconfig"; path = "Target Support Files/Pods-XaBar/Pods-XaBar.debug.xcconfig"; sourceTree = "<group>"; };
+		987BE0FFD760138A6AD12E68 /* Pods_XaBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XaBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,13 +46,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBAB67633AF50770ED39A8A /* Pods_XaBar.framework in Frameworks */,
+				CA67501347D03EB2F6F4982B /* Pods_XaBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106E541A246553BC00F5EE3C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1075FAA1246892E50047CC79 /* SettingsManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1075FAA1246892E50047CC79 /* SettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				1075FAA2246892E50047CC79 /* SettingsManager.swift */,
+			);
+			path = SettingsManager;
+			sourceTree = "<group>";
+		};
 		1077B96321F3D26D008AFBD6 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,19 +110,13 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		108C0A0E23B6EA5E00B7E280 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
 		1093047C226E56D3002A567A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				108C0A0A23B6E53800B7E280 /* Core */,
 				10EB1AB2214FEBCB00F5612E /* PopoverVC.swift */,
 				1093047A226E56AE002A567A /* AboutVC.swift */,
+				10A4A7752466FFC4003CC398 /* SettingsVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -110,8 +126,8 @@
 			children = (
 				10EB1AA1214FE5EB00F5612E /* XaBar */,
 				10EB1AA0214FE5EB00F5612E /* Products */,
-				44FF0F078FAFEC0601A6F970 /* Pods */,
-				17076E966930D07DFE0D38D6 /* Frameworks */,
+				5A8463237D8583428776191B /* Pods */,
+				48C664EB576F5FA804EFC876 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +142,8 @@
 		10EB1AA1214FE5EB00F5612E /* XaBar */ = {
 			isa = PBXGroup;
 			children = (
-				108C0A0E23B6EA5E00B7E280 /* Services */,
 				108C0A0D23B6E74A00B7E280 /* Core */,
+				106E541A246553BC00F5EE3C /* Services */,
 				1077B96321F3D26D008AFBD6 /* Elements */,
 				1093047C226E56D3002A567A /* ViewControllers */,
 				10EB1AA6214FE5EC00F5612E /* Assets.xcassets */,
@@ -138,21 +154,21 @@
 			path = XaBar;
 			sourceTree = "<group>";
 		};
-		17076E966930D07DFE0D38D6 /* Frameworks */ = {
+		48C664EB576F5FA804EFC876 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D86E83C7F0EDEB5870BA67AF /* Pods_XaBar.framework */,
+				987BE0FFD760138A6AD12E68 /* Pods_XaBar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		44FF0F078FAFEC0601A6F970 /* Pods */ = {
+		5A8463237D8583428776191B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1825A7C485F03094C8A61633 /* Pods-XaBar.debug.xcconfig */,
-				8E38A54C004801F55FDC3FF7 /* Pods-XaBar.release.xcconfig */,
+				447040958E2F9782696A1E57 /* Pods-XaBar.debug.xcconfig */,
+				3A6510F77C707D64D7335423 /* Pods-XaBar.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,11 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10EB1AAF214FE5EC00F5612E /* Build configuration list for PBXNativeTarget "XaBar" */;
 			buildPhases = (
-				A667D6650EAB7985B92FBC92 /* [CP] Check Pods Manifest.lock */,
+				92EE56EDB56F575592FB7EC6 /* [CP] Check Pods Manifest.lock */,
 				10EB1A9B214FE5EB00F5612E /* Sources */,
 				10EB1A9C214FE5EB00F5612E /* Frameworks */,
 				10EB1A9D214FE5EB00F5612E /* Resources */,
-				DCEDE99CAF7779FF29F74D1F /* [CP] Embed Pods Frameworks */,
+				D1D61FC2E2D4AB9B37CA4270 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +216,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"cs-CZ",
 			);
 			mainGroup = 10EB1A96214FE5EB00F5612E;
 			productRefGroup = 10EB1AA0214FE5EB00F5612E /* Products */;
@@ -224,7 +241,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A667D6650EAB7985B92FBC92 /* [CP] Check Pods Manifest.lock */ = {
+		92EE56EDB56F575592FB7EC6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,26 +263,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DCEDE99CAF7779FF29F74D1F /* [CP] Embed Pods Frameworks */ = {
+		D1D61FC2E2D4AB9B37CA4270 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-XaBar/Pods-XaBar-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-XaBar/Pods-XaBar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-XaBar/Pods-XaBar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XaBar/Pods-XaBar-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XaBar/Pods-XaBar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -279,6 +291,8 @@
 				10EB1AB3214FEBCB00F5612E /* PopoverVC.swift in Sources */,
 				1065098C22AD6F5E00AAE749 /* Overlay.swift in Sources */,
 				104F79DF21C683CB00870E31 /* WebViewController.swift in Sources */,
+				1075FAA3246892E50047CC79 /* SettingsManager.swift in Sources */,
+				10A4A7762466FFC4003CC398 /* SettingsVC.swift in Sources */,
 				10EB1AA3214FE5EB00F5612E /* AppDelegate.swift in Sources */,
 				108C0A0C23B6E55800B7E280 /* CoreVC.swift in Sources */,
 			);
@@ -291,6 +305,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				10EB1AA9214FE5EC00F5612E /* Base */,
+				101850B12464CF6300B68C33 /* en */,
+				101850B22464D77700B68C33 /* cs-CZ */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -302,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -362,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -413,7 +431,7 @@
 		};
 		10EB1AB0214FE5EC00F5612E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1825A7C485F03094C8A61633 /* Pods-XaBar.debug.xcconfig */;
+			baseConfigurationReference = 447040958E2F9782696A1E57 /* Pods-XaBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = XaBar/xabar.entitlements;
@@ -439,7 +457,7 @@
 		};
 		10EB1AB1214FE5EC00F5612E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E38A54C004801F55FDC3FF7 /* Pods-XaBar.release.xcconfig */;
+			baseConfigurationReference = 3A6510F77C707D64D7335423 /* Pods-XaBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = XaBar/xabar.entitlements;
