@@ -26,6 +26,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="1BJ-VW-aZT"/>
+                                                <segue destination="c5B-AG-g6X" kind="show" id="saX-W8-hsB"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="R2r-K3-fsz"/>
@@ -461,7 +462,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
             <objects>
                 <viewController title="Settings" storyboardIdentifier="SettingsVC" showSeguePresentationStyle="single" id="Znk-LG-HTU" customClass="SettingsVC" customModule="XaBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uFj-8j-dNr">
-                        <rect key="frame" x="0.0" y="0.0" width="358" height="89"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-wc-UVC">
@@ -486,12 +487,12 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-cp-K8W">
+                            <textField focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-cp-K8W">
                                 <rect key="frame" x="65" y="16" width="55" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="YJu-FE-d8s"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="Yex-in-uxm">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" usesSingleLineMode="YES" bezelStyle="round" id="Yex-in-uxm">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="3n8-0S-3nF"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -502,7 +503,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-1P-6My">
-                                <rect key="frame" x="148" y="49" width="124" height="18"/>
+                                <rect key="frame" x="148" y="49" width="180" height="18"/>
                                 <buttonCell key="cell" type="check" title="Allow animations" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tcf-KE-gFg">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -512,11 +513,11 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sS-kk-ylh">
-                                <rect key="frame" x="148" y="18" width="192" height="18"/>
+                                <rect key="frame" x="148" y="18" width="248" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="188" id="zbA-KL-0le"/>
+                                    <constraint firstAttribute="width" constant="244" id="vfQ-Zf-ug0"/>
                                 </constraints>
-                                <buttonCell key="cell" type="check" title="Click outside close window" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lFm-gX-aud">
+                                <buttonCell key="cell" type="check" title="Click outside the window will close it" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lFm-gX-aud">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -524,12 +525,12 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                     <action selector="allowAutoCloseChanged:" target="Znk-LG-HTU" id="2aY-Pt-h0Y"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nln-v9-7Bh">
+                            <textField focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-v9-7Bh">
                                 <rect key="frame" x="65" y="47" width="55" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="bKT-zf-rZh"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="8L3-vc-dN4">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" focusRingType="none" usesSingleLineMode="YES" bezelStyle="round" id="8L3-vc-dN4">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="oPl-9M-Bvg"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -567,7 +568,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                 </viewController>
                 <customObject id="NO1-mp-XEr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576" y="219"/>
+            <point key="canvasLocation" x="1576" y="206"/>
         </scene>
         <!--PopoverVC-->
         <scene sceneID="2Ag-6V-W6Y">
@@ -587,7 +588,6 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="WcJ-ba-N67">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-Q1-LOM">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cYE-Ln-bbk">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -605,7 +605,6 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="Y3Q-7i-cM7">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZ2-lD-SU5">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ea6-KI-eFc">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -777,6 +776,9 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
             <point key="canvasLocation" x="779" y="245"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="saX-W8-hsB"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="NSMenuMixedStateTemplate" width="10" height="2"/>
         <image name="NSMenuOnStateTemplate" width="12" height="12"/>

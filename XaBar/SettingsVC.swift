@@ -25,7 +25,10 @@ class SettingsVC: CoreVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        widthField.formatter = nil
+        
         prepareView()
+        NSApp.setActivationPolicy(.regular)
         
     }
     
@@ -57,6 +60,7 @@ class SettingsVC: CoreVC {
 
     deinit {
         SettingsVC.canOpenWindow = true
+        NSApp.setActivationPolicy(.prohibited)
     }
 
     
@@ -68,7 +72,7 @@ extension SettingsVC {
     
     @IBAction func widthChanged(_ sender: NSTextField) {
         
-        SM.set(.width, value: Int(sender.stringValue) ?? 500)
+        SM.set(.width, value: Int(sender.stringValue) ?? 600)
         updateWindowSize()
         
     }
@@ -85,7 +89,7 @@ extension SettingsVC {
     @IBAction func allowAnimationsChanged(_ sender: NSButton) {
         
         SM.set(.enableAnimations, value: stateToBool(sender.state))
-        delegate.popover.animates = SM.get(.enableAnimations)
+        delegate.preparePopover()
         
     }
     
@@ -93,7 +97,7 @@ extension SettingsVC {
     @IBAction func allowAutoCloseChanged(_ sender: NSButton) {
         
         SM.set(.enableAutoClose, value: stateToBool(sender.state))
-        delegate.popover.animates = SM.get(.enableAutoClose)
+        delegate.preparePopover()
         
     }
     

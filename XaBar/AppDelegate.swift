@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         
         firstLaunch()
         
-        setupPopover()
+        preparePopover()
         
         setupStatusItem()
         
@@ -89,12 +89,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 //MARK: SETUP METHODS
 extension AppDelegate {
     
-    private func setupPopover() {
+    public func preparePopover() {
+        
+        if popover != nil {
+            closePopover()
+        }
         
         let min = NSSize(width: CGFloat(860), height: CGFloat(525))
         let max = NSSize(width: CGFloat(1000), height: CGFloat(1000))
+        
+        let size = NSSize(width: SM.get(.width), height: SM.get(.height))
+        
+        
         popover = PopoverResize(min: min, max: max)
-        popover.setContentViewController(PopoverVC.getPopoverVC(), initialSize: min)
+        popover.setContentViewController(PopoverVC.getPopoverVC(), initialSize: size)
         
         popover.resized {(size: NSSize) in
           print("Popover resized: \(size)")
@@ -103,7 +111,7 @@ extension AppDelegate {
         popover.contentViewController?.loadView()
         
         popover.animates = SM.get(.enableAnimations)
-        popover.contentSize = NSSize(width: SM.get(.width), height: SM.get(.height))
+        popover.contentSize = size
         popover.behavior = (SM.get(.enableAutoClose) == false ? .applicationDefined : .transient)
         
     }
