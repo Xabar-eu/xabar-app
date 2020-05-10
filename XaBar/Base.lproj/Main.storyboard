@@ -341,7 +341,7 @@
         <!--Window Controller-->
         <scene sceneID="X1M-Bk-87f">
             <objects>
-                <windowController id="c5B-AG-g6X" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="c5B-AG-g6X" sceneMemberID="viewController">
                     <window key="window" title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="T06-aB-Np6">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -357,7 +357,7 @@
                 </windowController>
                 <customObject id="hWF-vJ-fDE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557" y="625"/>
+            <point key="canvasLocation" x="-256" y="858"/>
         </scene>
         <!--About-->
         <scene sceneID="Ugp-wQ-Ya5">
@@ -455,7 +455,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                 </viewController>
                 <customObject id="mzZ-vd-X8A" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2099" y="609"/>
+            <point key="canvasLocation" x="222" y="814"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8zk-gF-c7S">
@@ -696,6 +696,17 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                                 <action selector="reload:" target="iwo-M9-wDL" id="PDW-Iy-ZMf"/>
                                             </connections>
                                         </button>
+                                        <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Yx-Ll-7a7">
+                                            <rect key="frame" x="768" y="3" width="89" height="14"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="85" id="rG7-Fc-oG9"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="INCOGNITO" id="9eZ-sa-iUt">
+                                                <font key="font" metaFont="systemMedium" size="11"/>
+                                                <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="leading" secondItem="qKH-JW-aha" secondAttribute="leading" constant="8" id="1CR-2E-vzH"/>
@@ -703,6 +714,8 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                         <constraint firstItem="GQt-dt-3fA" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="4mF-iw-6L3"/>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="55P-q1-SXV"/>
                                         <constraint firstAttribute="bottom" secondItem="bqJ-1b-cLU" secondAttribute="bottom" id="6qL-ex-jWh"/>
+                                        <constraint firstItem="4Yx-Ll-7a7" firstAttribute="centerY" secondItem="qKH-JW-aha" secondAttribute="centerY" id="7TV-5C-Kqn"/>
+                                        <constraint firstAttribute="trailing" secondItem="4Yx-Ll-7a7" secondAttribute="trailing" constant="5" id="D6e-Y6-ufD"/>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="GR2-dg-WXD"/>
                                         <constraint firstAttribute="bottom" secondItem="XuU-mp-pDy" secondAttribute="bottom" id="QYX-JB-cF0"/>
                                         <constraint firstAttribute="bottom" secondItem="GQt-dt-3fA" secondAttribute="bottom" id="SYR-Nr-CgU"/>
@@ -728,6 +741,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="incognitoIndicator" destination="4Yx-Ll-7a7" id="73t-sk-NtS"/>
                         <outlet property="mainMenu" destination="Vx4-Ez-zhv" id="oly-Xt-ROQ"/>
                         <outlet property="modeSwitch" destination="RhM-vk-BBi" id="FDf-9T-ZNK"/>
                         <outlet property="webView" destination="CcF-tk-fL7" id="rya-KE-TvJ"/>
@@ -773,11 +787,11 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                     </connections>
                 </menu>
             </objects>
-            <point key="canvasLocation" x="779" y="245"/>
+            <point key="canvasLocation" x="779" y="244.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="saX-W8-hsB"/>
+        <segue reference="4sG-cc-iVP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="NSMenuMixedStateTemplate" width="10" height="2"/>

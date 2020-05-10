@@ -18,6 +18,7 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
     var contactUrl: String = ""
     
     @IBOutlet var modeSwitch: NSMenuItem!
+    @IBOutlet var incognitoIndicator: NSTextField!
     
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
         notificationCenter.delegate = self
         
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.checkTitle), userInfo: nil, repeats: true)
+        
         setupWebView()
         
         prepareView()
@@ -39,6 +41,7 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
         let incognitoState = SM.get(.isIncognitoEnable)
         modeSwitch.state = (incognitoState == false ? .off : .on)
         webView.setMode(incognitoState == false ? .normal : .incognito)
+        incognitoIndicator.isHidden = !incognitoState
         
     }
     
@@ -116,8 +119,10 @@ extension PopoverVC {
         
         if sender.state == .on {
             webView.setMode(.incognito)
+            incognitoIndicator.isHidden = false
         } else if sender.state == .off {
             webView.setMode(.normal)
+            incognitoIndicator.isHidden = true
         }
         
         print("Current mode: \(webView.actualMode)")
