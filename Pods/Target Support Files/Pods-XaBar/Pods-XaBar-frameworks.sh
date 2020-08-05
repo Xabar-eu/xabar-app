@@ -198,11 +198,11 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PopoverResize/PopoverResize.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/PopoverResize/PopoverResize.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HotKey/HotKey.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

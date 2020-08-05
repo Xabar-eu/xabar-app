@@ -25,7 +25,7 @@ class SettingsVC: CoreVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        widthField.formatter = nil
+        setupTextFields()
         
         prepareView()
         NSApp.setActivationPolicy(.regular)
@@ -108,7 +108,6 @@ extension SettingsVC {
 //MARK: HELPER METHODS
 extension SettingsVC {
     
-    
     func boolToState(_ bool: Bool) -> NSControl.StateValue {
         return bool == true ? .on : .off
     }
@@ -127,5 +126,18 @@ extension SettingsVC {
         
     }
     
+    
+}
+
+
+//MARK: SETUP METHODS
+extension SettingsVC {
+    
+    private func setupTextFields() {
+        
+        widthField.formatter = nil
+        heightField.formatter = nil
+        
+    }
     
 }

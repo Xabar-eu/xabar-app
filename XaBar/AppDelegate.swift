@@ -1,6 +1,5 @@
 import Cocoa
 import AppKit
-import PopoverResize
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
@@ -8,7 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     typealias SM = SettingsManager
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-    var popover: PopoverResize!
+    var popover: NSPopover!
     var mainMenu = NSMenu()
     
     
@@ -93,21 +92,14 @@ extension AppDelegate {
         
         if popover != nil {
             closePopover()
+            popover = nil
         }
-        
-        let min = NSSize(width: CGFloat(860), height: CGFloat(525))
-        let max = NSSize(width: CGFloat(1000), height: CGFloat(1000))
         
         let size = NSSize(width: SM.get(.width), height: SM.get(.height))
         
-        
-        popover = PopoverResize(min: min, max: max)
-        popover.setContentViewController(PopoverVC.getPopoverVC(), initialSize: size)
-        
-        popover.resized {(size: NSSize) in
-          print("Popover resized: \(size)")
-        }
-              
+        popover = NSPopover()
+        popover.contentViewController = PopoverVC.getPopoverVC()
+    
         popover.contentViewController?.loadView()
         
         popover.animates = SM.get(.enableAnimations)

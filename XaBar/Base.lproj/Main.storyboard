@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="16002"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="17007"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17147"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="17147"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
@@ -402,7 +402,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F3f-Jz-CT8">
-                                            <rect key="frame" x="18" y="25" width="226" height="32"/>
+                                            <rect key="frame" x="14" y="25" width="230" height="32"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="PEl-6U-tIu">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">Created by
@@ -462,11 +462,11 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
             <objects>
                 <viewController title="Settings" storyboardIdentifier="SettingsVC" showSeguePresentationStyle="single" id="Znk-LG-HTU" customClass="SettingsVC" customModule="XaBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uFj-8j-dNr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LoS-wc-UVC">
-                                <rect key="frame" x="18" y="50" width="44" height="16"/>
+                                <rect key="frame" x="18" y="51" width="44" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="FXT-6X-cNi"/>
                                 </constraints>
@@ -477,7 +477,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l2K-RF-l2D">
-                                <rect key="frame" x="18" y="19" width="44" height="16"/>
+                                <rect key="frame" x="18" y="20" width="44" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ctP-AF-4mf"/>
                                 </constraints>
@@ -488,7 +488,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-cp-K8W">
-                                <rect key="frame" x="65" y="16" width="55" height="22"/>
+                                <rect key="frame" x="65" y="17" width="55" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="YJu-FE-d8s"/>
                                 </constraints>
@@ -503,7 +503,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rRV-1P-6My">
-                                <rect key="frame" x="148" y="49" width="180" height="18"/>
+                                <rect key="frame" x="148" y="50" width="178" height="18"/>
                                 <buttonCell key="cell" type="check" title="Allow animations" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="tcf-KE-gFg">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -513,7 +513,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sS-kk-ylh">
-                                <rect key="frame" x="148" y="18" width="248" height="18"/>
+                                <rect key="frame" x="148" y="19" width="246" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="244" id="vfQ-Zf-ug0"/>
                                 </constraints>
@@ -526,7 +526,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                 </connections>
                             </button>
                             <textField focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nln-v9-7Bh">
-                                <rect key="frame" x="65" y="47" width="55" height="22"/>
+                                <rect key="frame" x="65" y="48" width="55" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="bKT-zf-rZh"/>
                                 </constraints>
@@ -568,7 +568,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                 </viewController>
                 <customObject id="NO1-mp-XEr" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576" y="206"/>
+            <point key="canvasLocation" x="1576" y="205.5"/>
         </scene>
         <!--PopoverVC-->
         <scene sceneID="2Ag-6V-W6Y">
@@ -578,7 +578,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                         <rect key="frame" x="0.0" y="0.0" width="860" height="525"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <wkWebView wantsLayer="YES" canDrawConcurrently="YES" focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="CcF-tk-fL7" customClass="WebViewController" customModule="XaBar" customModuleProvider="target">
+                            <wkWebView wantsLayer="YES" focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="CcF-tk-fL7" customClass="WebViewController" customModule="XaBar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="860" height="505"/>
                                 <touchBar key="touchBar" id="eCp-gc-0c6">
                                     <touchBarItems>
@@ -669,7 +669,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <color key="borderColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         </box>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-mp-pDy">
-                                            <rect key="frame" x="8" y="0.0" width="25" height="20"/>
+                                            <rect key="frame" x="8" y="-3" width="25" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="Sch-3n-62Z"/>
                                             </constraints>
@@ -683,7 +683,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GQt-dt-3fA">
-                                            <rect key="frame" x="33" y="0.0" width="25" height="20"/>
+                                            <rect key="frame" x="33" y="-3" width="25" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="25" id="tCF-LC-sUs"/>
                                             </constraints>
@@ -794,10 +794,10 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
         <segue reference="4sG-cc-iVP"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="NSMenuMixedStateTemplate" width="10" height="2"/>
-        <image name="NSMenuOnStateTemplate" width="12" height="12"/>
-        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
-        <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
+        <image name="NSMenuMixedStateTemplate" width="15" height="4"/>
+        <image name="NSMenuOnStateTemplate" width="15" height="13"/>
+        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+        <image name="NSStopProgressFreestandingTemplate" width="15" height="15"/>
         <image name="logo" width="512" height="512"/>
     </resources>
 </document>

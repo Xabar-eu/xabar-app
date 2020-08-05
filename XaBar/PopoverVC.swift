@@ -1,6 +1,7 @@
-import Cocoa
+import AppKit
 import WebKit
 import EasyPeasy
+import HotKey
 
 class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
     
@@ -20,10 +21,88 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
     @IBOutlet var modeSwitch: NSMenuItem!
     @IBOutlet var incognitoIndicator: NSTextField!
     
+    let togglePopoverHotKey = HotKey(key: .x, modifiers: [.command, .option])
+    
+    let testHotKey = HotKey(key: .keypad0, modifiers: [])
+    
+    @objc func test() {
+        
+        print(NSEvent.pressedMouseButtons)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        togglePopoverHotKey.keyDownHandler = {
+            self.delegate.togglePopover()
+        }
+        
+        testHotKey.keyDownHandler = {
+            
+            let code = """
+                tell application "System Events"
+                key code 124 using control down -- control-up
+                end tell
+                """
+            
+            let scriptObject = NSAppleScript(source: code)
+            
+            var possibleError: NSDictionary?
+            
+            scriptObject?.executeAndReturnError(&possibleError)
+            if let error = possibleError {
+                print("ERROR: \(error)")
+            }
+        }
+        
+        
+        NSEvent.addGlobalMonitorForEvents(matching: [.otherMouseDown]) { (event) in
+            
+            print(NSEvent.pressedMouseButtons)
+            
+            let direction = NSEvent.pressedMouseButtons
+            
+            if direction == 8 {
+                let code = """
+                    tell application "System Events"
+                    key code 124 using control down -- control-up
+                    end tell
+                    """
+                
+                
+                let scriptObject = NSAppleScript(source: code)
+                
+                var possibleError: NSDictionary?
+                
+                scriptObject?.executeAndReturnError(&possibleError)
+                if let error = possibleError {
+                    print("ERROR: \(error)")
+                }
+            }
+            
+            if direction == 16 {
+                let code = """
+                    tell application "System Events"
+                    key code 123 using control down -- control-up
+                    end tell
+                    """
+                
+                
+                let scriptObject = NSAppleScript(source: code)
+                
+                var possibleError: NSDictionary?
+                
+                scriptObject?.executeAndReturnError(&possibleError)
+                if let error = possibleError {
+                    print("ERROR: \(error)")
+                }
+            }
+            
+        }
+        
+                
         delegate.mainMenu = mainMenu
         notificationCenter.delegate = self
         
@@ -181,12 +260,6 @@ extension PopoverVC: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
-        //FIXME: Vytvořit stahovani obrazků
-        
-        let request: URLRequest = navigationAction.request
-        
-        let url: URL? = request.url
-        let urlString: String? = url?.absoluteString
         
         //        if url?.pathExtension
         
@@ -195,6 +268,12 @@ extension PopoverVC: WKNavigationDelegate {
                 //Redirected to browser. No need to open it locally
                 NSWorkspace.shared.open(url)
                 decisionHandler(.cancel)
+                
+                // uprava pro dvou faktor
+                if url.absoluteString.contains("facebook.com") {
+                    decisionHandler(.allow)
+                }
+                
             } else {
                 //Open it locally
                 decisionHandler(.allow)

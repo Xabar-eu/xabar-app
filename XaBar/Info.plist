@@ -33,6 +33,8 @@
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
 	</dict>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Test</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Jan Kožnárek. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
