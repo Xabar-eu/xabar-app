@@ -23,14 +23,6 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
     
     let togglePopoverHotKey = HotKey(key: .x, modifiers: [.command, .option])
     
-    let testHotKey = HotKey(key: .keypad0, modifiers: [])
-    
-    @objc func test() {
-        
-        print(NSEvent.pressedMouseButtons)
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,77 +31,12 @@ class PopoverVC: CoreVC, NSUserNotificationCenterDelegate {
             self.delegate.togglePopover()
         }
         
-        testHotKey.keyDownHandler = {
-            
-            let code = """
-                tell application "System Events"
-                key code 124 using control down -- control-up
-                end tell
-                """
-            
-            let scriptObject = NSAppleScript(source: code)
-            
-            var possibleError: NSDictionary?
-            
-            scriptObject?.executeAndReturnError(&possibleError)
-            if let error = possibleError {
-                print("ERROR: \(error)")
-            }
-        }
-        
-        
-        NSEvent.addGlobalMonitorForEvents(matching: [.otherMouseDown]) { (event) in
-            
-            print(NSEvent.pressedMouseButtons)
-            
-            let direction = NSEvent.pressedMouseButtons
-            
-            if direction == 8 {
-                let code = """
-                    tell application "System Events"
-                    key code 124 using control down -- control-up
-                    end tell
-                    """
-                
-                
-                let scriptObject = NSAppleScript(source: code)
-                
-                var possibleError: NSDictionary?
-                
-                scriptObject?.executeAndReturnError(&possibleError)
-                if let error = possibleError {
-                    print("ERROR: \(error)")
-                }
-            }
-            
-            if direction == 16 {
-                let code = """
-                    tell application "System Events"
-                    key code 123 using control down -- control-up
-                    end tell
-                    """
-                
-                
-                let scriptObject = NSAppleScript(source: code)
-                
-                var possibleError: NSDictionary?
-                
-                scriptObject?.executeAndReturnError(&possibleError)
-                if let error = possibleError {
-                    print("ERROR: \(error)")
-                }
-            }
-            
-        }
-        
-                
         delegate.mainMenu = mainMenu
         notificationCenter.delegate = self
         
         _ = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.checkTitle), userInfo: nil, repeats: true)
         
         setupWebView()
-        
         prepareView()
         
     }

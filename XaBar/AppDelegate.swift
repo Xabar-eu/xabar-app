@@ -7,6 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     typealias SM = SettingsManager
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+
     var popover: NSPopover!
     var mainMenu = NSMenu()
     
