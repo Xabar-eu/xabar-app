@@ -53,8 +53,10 @@ class SettingsVC: CoreVC {
         
         SettingsVC.canOpenWindow = false
         
-        NSApp.setActivationPolicy(.regular)
+        NSApp.setActivationPolicy(.regular)  
         vc.presentAsModalWindow(vc)
+        NSApp.activate(ignoringOtherApps: true)
+
     }
     
 
