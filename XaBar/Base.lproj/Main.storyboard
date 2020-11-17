@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="17007"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17147"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="17147"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="17008"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17506"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="17506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
@@ -455,7 +455,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                 </viewController>
                 <customObject id="mzZ-vd-X8A" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="814"/>
+            <point key="canvasLocation" x="322" y="848"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8zk-gF-c7S">
@@ -588,6 +588,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="WcJ-ba-N67">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-Q1-LOM">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cYE-Ln-bbk">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -605,6 +606,7 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                             <viewController key="viewController" id="Y3Q-7i-cM7">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZ2-lD-SU5">
                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ea6-KI-eFc">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -630,44 +632,6 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                     <rect key="frame" x="0.0" y="0.0" width="860" height="20"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <box boxType="custom" borderType="none" cornerRadius="4" title="Box" transparent="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqJ-1b-cLU">
-                                            <rect key="frame" x="405" y="0.0" width="50" height="20"/>
-                                            <view key="contentView" id="Ts8-yX-8gf">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6ud-tN-nX8">
-                                                        <rect key="frame" x="-2" y="0.0" width="15" height="19"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="X" id="WJO-Ba-Vf1">
-                                                            <font key="font" metaFont="systemBlack" size="13"/>
-                                                            <color key="textColor" red="0.0" green="0.51764705882352935" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MvK-nJ-4ec">
-                                                        <rect key="frame" x="9" y="0.0" width="33" height="19"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="aBar" id="J66-Yg-A6f">
-                                                            <font key="font" metaFont="systemSemibold" size="13"/>
-                                                            <color key="textColor" red="0.088824395910021794" green="0.088395292548137633" blue="0.089253499271905956" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MvK-nJ-4ec" secondAttribute="trailing" constant="1" id="3MY-gn-plU"/>
-                                                    <constraint firstItem="6ud-tN-nX8" firstAttribute="top" secondItem="Ts8-yX-8gf" secondAttribute="top" constant="1" id="6bq-P3-VJv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6ud-tN-nX8" secondAttribute="bottom" id="Aiu-Xc-87v"/>
-                                                    <constraint firstItem="6ud-tN-nX8" firstAttribute="leading" secondItem="Ts8-yX-8gf" secondAttribute="leading" id="B13-9i-ncx"/>
-                                                    <constraint firstItem="MvK-nJ-4ec" firstAttribute="leading" secondItem="6ud-tN-nX8" secondAttribute="trailing" id="UmB-U5-N3i"/>
-                                                    <constraint firstItem="MvK-nJ-4ec" firstAttribute="top" secondItem="Ts8-yX-8gf" secondAttribute="top" constant="1" id="aXp-k7-pZg"/>
-                                                    <constraint firstAttribute="bottom" secondItem="MvK-nJ-4ec" secondAttribute="bottom" id="t4H-Ez-7zG"/>
-                                                </constraints>
-                                            </view>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="LIJ-7Q-JFz"/>
-                                            </constraints>
-                                            <color key="borderColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </box>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-mp-pDy">
                                             <rect key="frame" x="8" y="-3" width="25" height="26"/>
                                             <constraints>
@@ -713,14 +677,11 @@ Jan Kožnárek &amp; Radoslav Bačik</string>
                                         <constraint firstItem="GQt-dt-3fA" firstAttribute="leading" secondItem="XuU-mp-pDy" secondAttribute="trailing" id="3XU-VM-xiE"/>
                                         <constraint firstItem="GQt-dt-3fA" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="4mF-iw-6L3"/>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="55P-q1-SXV"/>
-                                        <constraint firstAttribute="bottom" secondItem="bqJ-1b-cLU" secondAttribute="bottom" id="6qL-ex-jWh"/>
                                         <constraint firstItem="4Yx-Ll-7a7" firstAttribute="centerY" secondItem="qKH-JW-aha" secondAttribute="centerY" id="7TV-5C-Kqn"/>
                                         <constraint firstAttribute="trailing" secondItem="4Yx-Ll-7a7" secondAttribute="trailing" constant="5" id="D6e-Y6-ufD"/>
                                         <constraint firstItem="XuU-mp-pDy" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="GR2-dg-WXD"/>
                                         <constraint firstAttribute="bottom" secondItem="XuU-mp-pDy" secondAttribute="bottom" id="QYX-JB-cF0"/>
                                         <constraint firstAttribute="bottom" secondItem="GQt-dt-3fA" secondAttribute="bottom" id="SYR-Nr-CgU"/>
-                                        <constraint firstItem="bqJ-1b-cLU" firstAttribute="top" secondItem="qKH-JW-aha" secondAttribute="top" id="UYF-rc-Q6Q"/>
-                                        <constraint firstItem="bqJ-1b-cLU" firstAttribute="centerX" secondItem="qKH-JW-aha" secondAttribute="centerX" id="rBo-iP-M5H"/>
                                         <constraint firstAttribute="bottom" secondItem="XuU-mp-pDy" secondAttribute="bottom" id="scr-40-mYm"/>
                                     </constraints>
                                 </view>

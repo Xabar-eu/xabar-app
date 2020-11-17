@@ -1,5 +1,4 @@
 import Cocoa
-import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
